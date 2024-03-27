@@ -30,7 +30,9 @@ const letterC = {
   "offsety": 0
 }
 
-const backgroundColor  = "#acf2e7";
+// const backgroundColor  = "#acf2e7";
+
+const backgroundColor  = "white ";
 
 const darkGreen  = "#26b29d";
 const lightGreen  = "#30dfc4";
@@ -70,10 +72,39 @@ function drawLetter(posx, posy, letterData) {
   let pos2y = posy + letterData["offsety"];
 
   // draw two circles
-  fill(darkGreen);
-  ellipse(posx, posy, 150, 150);
-  fill(lightGreen);
-  ellipse(pos2x, pos2y, size2, size2);
+ 
+  // fill(darkGreen);
+
+
+  // ellipse(posx, posy, 150, 150);
+  // fill(lightGreen);
+ 
+  // ellipse(pos2x+10, pos2y-35, size2*1.2, size2*1.2);
+  // rect(posx+40, posy-80, 20,160)
+  // rect(posx+60, posy-80, 20,160)
+  noStroke()
+
+  stroke("pink")
+  strokeWeight(8)
+  noFill()
+
+  angleMode(DEGREES)
+  arc(50, 50, 80, 80, 90, 270)
+
+  arc(140,20,30,30,270,90)
+  arc(140,69,50,50,270,90)
+
+  arc(250, 50, 80, 80, 90, 270)
+
+  stroke("skyblue")
+  line(60,5,60,95)
+  line(70,5,70,95)
+  line(130,5,130,95)
+  line(120,5,120,95)
+
+
+
+
 }
 
 function keyTyped() {

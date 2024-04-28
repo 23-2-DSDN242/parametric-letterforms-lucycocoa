@@ -12,8 +12,23 @@ The three parameters per letter:
 
 # Initial design
 
-I sketched a letter composed of straight lines and arcs, thinking that an arc can create various shapes depending on the angle value.
+I sketched a letter composed of nine paramaters consisting of straight lines and arcs, thinking that an arc can create various shapes depending on the angle value.
 
 
 <img width="588" alt="Screenshot 2024-04-19 at 12 53 27 PM" src="https://github.com/23-2-DSDN242/time-based-media-lucycocoa/assets/140350024/0c5e0269-1a45-40b9-b107-fda0c141a8d5">
 
+At first, it took some time to understand how to determine parameters for shapes and set them, but once I adapted, I was able to plan the final design.
+ * `size1` : radius of the second circle
+  * `offsetx` : x offset of the second circle relative to the first one
+  * `offsety` : y offset of the second circle relative to the first one
+  * 'size1' : 150,
+
+
+  "size": 0,
+  "offsetx": 0,
+  "offsety": 0,
+  "offsetx3": 0,
+  "offsety3": 0,
+  "sizeb":0,
+  "offsetxellipse": 10,
+  "offsetyellipse": 80

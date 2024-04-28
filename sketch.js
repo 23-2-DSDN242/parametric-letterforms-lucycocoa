@@ -14,14 +14,18 @@ const canvasHeight = 500;
 
 const letterA = {
   "size1": 150,
-  "size": 80,
+  "size": 0,
   "offsetx": 0,
   "offsety": 0,
+  "offsetx3": 0,
+  "offsety3": 0,
+  "sizeb":0,
   "offsetxellipse": 10,
   "offsetyellipse": 80
 }
 
 const letterB = {
+  "size1": 0,
   "size": 70,
   "offsetx": -60,
   "offsety": 0,
@@ -34,9 +38,12 @@ const letterB = {
 
 const letterC = {
   "size1": 150,
-  "size": 100,
+  "size": 0,
   "offsetx": 0,
   "offsety": 280,
+  "offsetx3": 0,
+  "offsety3": 0,
+  "sizeb":0,
   "offsetxellipse": 0,
   "offsetyellipse": 0
 }

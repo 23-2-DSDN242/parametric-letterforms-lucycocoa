@@ -13,5 +13,7 @@ The three parameters per letter:
 # Initial design
 
 I sketched a letter composed of straight lines and arcs, thinking that an arc can create various shapes depending on the angle value.
+
+
 <img width="588" alt="Screenshot 2024-04-19 at 12 53 27 PM" src="https://github.com/23-2-DSDN242/time-based-media-lucycocoa/assets/140350024/0c5e0269-1a45-40b9-b107-fda0c141a8d5">
 

@@ -165,7 +165,7 @@ const alphabet = {
   "H": {
     "size": 45,
     "offsetx": 0,
-    "offsety": 8,
+    "offsety": 0,
     "R degree S":0,
     "R degree E":180,
     "Bsize":100,
@@ -180,14 +180,14 @@ const alphabet = {
     "G degree E":230,
     "Ysize":45,
     "offset4x": 0,
-    "offset4y": 0,
+    "offset4y": -2,
     "Y degree S":180,
     "Y degree E":0
   },
   "I": {
     "size": 50,
     "offsetx": 0,
-    "offsety": 50,
+    "offsety": 55,
     "R degree S":190,
     "R degree E":-10,
     "Bsize":55,
@@ -202,7 +202,7 @@ const alphabet = {
     "G degree E":50,
     "Ysize":50,
     "offset4x": 0,
-    "offset4y": -45,
+    "offset4y": -50,
     "Y degree S": 10,
     "Y degree E": 170
   },
@@ -250,8 +250,26 @@ const alphabet = {
   },
   "O": {
     "size": 50,
-    "offsetx": 15,
-    "offsety": 0
+    "offsetx": 11,
+    "offsety": -1,
+    "R degree S":-50,
+    "R degree E":50,
+    "Bsize":50,
+    "offset2x": -9,
+    "offset2y": -1,
+    "B degree S":120,
+    "B degree E":-130,
+    "Gsize":55,
+    "offset3x": 2,
+    "offset3y": 17,
+    "G degree S":0,
+    "G degree E":180,
+    "Ysize":55,
+    "offset4x": 2,
+    "offset4y": -15,
+    "Y degree S":180,
+    "Y degree E":0
+
   },
   "P": {
     "size": 50,
@@ -264,9 +282,27 @@ const alphabet = {
     "offsety": 0
   },
   "R": {
-    "size": 50,
-    "offsetx": 15,
-    "offsety": 0
+
+    "size": 45,
+    "offsetx": 5,
+    "offsety": -20,
+    "R degree S":360,
+    "R degree E":0,
+    "Bsize":55,
+    "offset2x": 43,
+    "offset2y": 25,
+    "B degree S":110,
+    "B degree E":-120,
+    "Gsize":55,
+    "offset3x": -45,
+    "offset3y": -22,
+    "G degree S":300,
+    "G degree E":60,
+    "Ysize":55,
+    "offset4x": -45,
+    "offset4y": 25,
+    "Y degree S":300,
+    "Y degree E":60
   },
   "S": {
     "size": 50,

@@ -41,7 +41,7 @@ const letterC = {
   "offsetyellipse": 0
 }
 
-// const backgroundColor  = "#acf2e7";
+
 
 const backgroundColor  = "white ";
 
@@ -81,6 +81,7 @@ function drawLetter(posx, posy, letterData) {
   let size1 = letterData["size1"];
   let size2 = letterData["size"];
   let size3 = letterData["sizeb"];
+  //3 arcs
 
   let pos2x = posx + letterData["offsetx"];
   let pos2y = posy + letterData["offsety"];
@@ -88,32 +89,11 @@ function drawLetter(posx, posy, letterData) {
   let pos3y = posy + letterData["offsety3"];
   let pos4x = posx + letterData["offsetxellipse"];
   let pos4y = posy + letterData["offsetyellipse"];
-  let pos5x = posx + letterData["offsetxellipse"];
-  let pos5y = posy + letterData["offsetyellipse"];
-  
-  
-  
-
-
-  // draw two circles
- 
-  // fill(darkGreen);
-
-
-  // ellipse(posx, posy, 150, 150);
 
   
-  // fill(lightGreen);
- 
-  // ellipse(pos2x+10, pos2y-35, size2*1.2, size2*1.2);
-  // rect(posx+40, posy-80, 20,160)
-  // rect(posx+60, posy-80, 20,160)
+  
+  
 
-  //////////
-  // noStroke()
-
-  // line(posx+40,posy-80,posx+20,posy-80)
-  // line(posx+40,posy-90,posx+20,posy-90)
 
   stroke("pink")
   strokeWeight(50)
@@ -128,7 +108,7 @@ function drawLetter(posx, posy, letterData) {
 
   stroke("skyblue")
   line(pos2x+10,pos2y-80,pos2x+10,pos2y+80)
-  // line(pos2x+20,pos2y-80,pos2x+20,pos2y+80)
+ 
   
   stroke("pink")
   arc(pos3x+10,pos3y-20,size2*1,size2*1,270,90)
@@ -139,7 +119,7 @@ function drawLetter(posx, posy, letterData) {
   ellipse(pos4x,pos4y,40,40)
 
   fill('skyblue')
-  ellipse(pos5x,pos5y,20,20)
+  ellipse(pos4x,pos4y,20,20)
 
  
 

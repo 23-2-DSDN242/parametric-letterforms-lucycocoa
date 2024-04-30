@@ -85,7 +85,27 @@ function interpolate_letter(percent, oldObj, newObj) {
   if(oldObj["G degree E"] > newObj["G degree E"]) {
     newObj["G degree E"] = newObj["G degree E"] + 360;
   } 
+
+  // if(oldObj["R degree S"] > newObj["R degree S"]) {
+  //   newObj["R degree S"] = newObj["R degree S"] + 360;
+  // } 
+  // if(oldObj["R degree E"] > newObj["R degree E"]) {
+  //   newObj["R degree E"] = newObj["R degree E"] + 360;
+  // } 
+
+  // if(oldObj["B degree S"] > newObj["B degree S"]) {
+  //   newObj["B degree S"] = newObj["B degree S"] + 360;
+  // } 
+  // if(oldObj["B degree E"] > newObj["B degree E"]) {
+  //   newObj["B degree E"] = newObj["B degree E"] + 360;
+  // } 
   
+  // if(oldObj["Y degree S"] > newObj["Y degree S"]) {
+  //   newObj["Y degree S"] = newObj["Y degree S"] + 360;
+  // } 
+  // if(oldObj["Y degree E"] > newObj["Y degree E"]) {
+  //   newObj["Y degree E"] = newObj["Y degree E"] + 360;
+  // } 
 
 
   new_letter["size"]    = map(percent, 0, 100, oldObj["size"], newObj["size"]);

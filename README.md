@@ -66,7 +66,7 @@ In composing my design, I utilized precisely 20 parameters, each determining the
 
 When transitioning from C to J, it was discovered that the green arc, unlike other arcs, does not rotate clockwise but snaps into position. 
 
-"https://github.com/23-2-DSDN242/time-based-media-lucycocoa/assets/140350024/eae93e17-8dc1-4d9e-a5ba-0021151d5ec0">
+<img width="945" alt="Screenshot 2024-04-30 at 7 42 51 PM" src="https://github.com/23-2-DSDN242/time-based-media-lucycocoa/assets/140350024/eae93e17-8dc1-4d9e-a5ba-0021151d5ec0">
 
 This occurs when the starting angle of the green arc comprising J is smaller than its ending angle. To address this issue, the module 'Class Example: Rita Rotation Links' was referenced. The following code was used to solve the problem:
 ```
@@ -77,4 +77,4 @@ if(oldObj["G degree S"] > newObj["G degree S"]) {
     newObj["G degree E"] = newObj["G degree E"] + 360;
   } 
   ```
-"https://github.com/23-2-DSDN242/time-based-media-lucycocoa/assets/140350024/f48356e7-e955-4a42-94f5-f316afc83c5d">
+<img width="945" alt="Screenshot 2024-04-30 at 7 45 41 PM" src="https://github.com/23-2-DSDN242/time-based-media-lucycocoa/assets/140350024/f48356e7-e955-4a42-94f5-f316afc83c5d">

@@ -84,7 +84,7 @@ In composing my design, I utilized precisely 20 parameters, each determining the
  * `Y degree S` : Angle to start the yellow arc
  * `Y degree E` : Angle to stop the yellow arc
 
-Each letter was designed to prominently feature the arc's strokes, with delicated attention to achieving the most harmonious colour arrangements.
+Each letter was designed to prominently feature the arc's curves, with delicated attention to achieving the most harmonious colour arrangements.
 
 In designing the numbers, a distinct approach was taken to ensure they did not bear too much resemblance to the letters. Except for '0', the numbers were designed by overlapping two strokes to create a single one, ensuring a distinct visual appearance from the letters.
 
@@ -109,3 +109,131 @@ if(oldObj["G degree S"] > newObj["G degree S"]) {
 <img width="945" alt="Screenshot 2024-04-30 at 8 16 23 PM" src="https://github.com/23-2-DSDN242/time-based-media-lucycocoa/assets/140350024/92e97eaf-57e4-4819-9386-9b2aae5ae9ae">
 
 This code was applied not only to the green arc but also to all other colors to ensure that the arcs in all letters rotate clockwise.
+
+However, there was an issue where shapes with a 360 degree angle for red, blue, and yellow arcs were not drawn properly. To address this, I added 360 to each angle's start and ending value and then used the remainder when divided by 360 to correct the values.
+
+``` if(oldObj["R degree S"] > newObj["R degree S"]) {
+    newObj["R degree S"] = (newObj["R degree S"] + 360) % 360;
+  } 
+  if(oldObj["R degree E"] > newObj["R degree E"]) {
+    newObj["R degree E"] = (newObj["R degree E"] + 360) % 360;
+  } 
+  ```
+
+<img width="945" alt="Screenshot 2024-04-30 at 9 55 51 PM" src="https://github.com/23-2-DSDN242/time-based-media-lucycocoa/assets/140350024/c3cb6c08-a0ec-4026-b824-8467a0a46167">
+<img width="945" alt="Screenshot 2024-04-30 at 9 55 55 PM" src="https://github.com/23-2-DSDN242/time-based-media-lucycocoa/assets/140350024/1f2dc122-8736-40e0-96d0-6ac6015047a7">
+
+
+I attempted to use this code to add more animation, intending for shapes drawn at 360 degrees to return to a vertically aligned state at the 50% interpolation point before transitioning to a new letter.
+
+
+```
+if(percent<50) 
+  { new_letter["size"] = map(percent, 0, 50, oldObj["size"],3);}
+  else{
+    new_letter["size"] = map(percent, 50, 100, 3 , newObj["size"]);
+  }
+  if(percent<50) 
+  { new_letter["offsetx"] = map(percent, 0, 50, oldObj["offsetx"],0);}
+  else{
+    new_letter["offsetx"] = map(percent, 50, 100, 0 , newObj["offsetx"]);
+  }
+  if(percent<50) 
+  { new_letter["offsety"] = map(percent, 0, 50, oldObj["offsety"],-40);}
+  else{
+    new_letter["offsety"] = map(percent, 50, 100, -40 , newObj["offsety"]);
+  }
+
+  if(percent<50) 
+  { new_letter["R degree S"] = map(percent, 0, 50, oldObj["R degree S"],0);}
+  else{
+    new_letter["R degree S"] = map(percent, 50, 100, 0 , newObj["R degree S"]);
+  }
+  if(percent<50) 
+  { new_letter["R degree E"] = map(percent, 0, 50, oldObj["R degree E"],360);}
+  else{
+    new_letter["R degree E"] = map(percent, 50, 100, 360 , newObj["R degree E"]);
+  }
+  
+  if(percent<50) 
+  { new_letter["Bsize"] = map(percent, 0, 50, oldObj["Bsize"],3);}
+  else{
+    new_letter["Bsize"] = map(percent, 50, 100, 3 , newObj["Bsize"]);
+  }
+  if(percent<50) 
+  { new_letter["offset2x"] = map(percent, 0, 50, oldObj["offset2x"],0);}
+  else{
+    new_letter["offset2x"] = map(percent, 50, 100, 0 , newObj["offset2x"]);
+  }
+  if(percent<50) 
+  { new_letter["offset2y"] = map(percent, 0, 50, oldObj["offset2y"],-12);}
+  else{
+    new_letter["offset2y"] = map(percent, 50, 100, -12 , newObj["offset2y"]);
+  }
+
+  if(percent<50) 
+  { new_letter["B degree S"] = map(percent, 0, 50, oldObj["B degree S"],0);}
+  else{
+    new_letter["B degree S"] = map(percent, 50, 100, 0 , newObj["B degree S"]);
+  }
+  if(percent<50) 
+  { new_letter["B degree E"] = map(percent, 0, 50, oldObj["B degree E"],360);}
+  else{
+    new_letter["B degree E"] = map(percent, 50, 100, 360 , newObj["B degree E"]);
+  }
+  if(percent<50) 
+  { new_letter["Gsize"] = map(percent, 0, 50, oldObj["Gsize"],3);}
+  else{
+    new_letter["Gsize"] = map(percent, 50, 100, 3 , newObj["Gsize"]);
+  }
+  if(percent<50) 
+  { new_letter["offset3x"] = map(percent, 0, 50, oldObj["offset3x"],0);}
+  else{
+    new_letter["offset3x"] = map(percent, 50, 100, 0 , newObj["offset3x"]);
+  }
+  if(percent<50) 
+  { new_letter["offset3y"] = map(percent, 0, 50, oldObj["offset3y"],20);}
+  else{
+    new_letter["offset3y"] = map(percent, 50, 100, 20 , newObj["offset3y"]);
+  }
+
+  if(percent<50) 
+  { new_letter["G degree S"] = map(percent, 0, 50, oldObj["G degree S"],0);}
+  else{
+    new_letter["G degree S"] = map(percent, 50, 100, 0 , newObj["G degree S"]);
+  }
+  if(percent<50) 
+  { new_letter["G degree E"] = map(percent, 0, 50, oldObj["G degree E"],360);}
+  else{
+    new_letter["G degree E"] = map(percent, 50, 100, 360 , newObj["G degree E"]);
+  }
+
+  if(percent<50) 
+  { new_letter["Ysize"] = map(percent, 0, 50, oldObj["Ysize"],3);}
+  else{
+    new_letter["Ysize"] = map(percent, 50, 100, 3 , newObj["Ysize"]);
+  }
+  if(percent<50) 
+  { new_letter["offset4x"] = map(percent, 0, 50, oldObj["offset4x"],0);}
+  else{
+    new_letter["offset4x"] = map(percent, 50, 100, 0 , newObj["offset4x"]);
+  }
+  if(percent<50) 
+  { new_letter["offset4y"] = map(percent, 0, 50, oldObj["offset4y"],50);}
+  else{
+    new_letter["offset4y"] = map(percent, 50, 100, 50 , newObj["offset4y"]);
+  }
+
+  if(percent<50) 
+  { new_letter["Y degree S"] = map(percent, 0, 50, oldObj["Y degree S"],0);}
+  else{
+    new_letter["Y degree S"] = map(percent, 50, 100, 0 , newObj["Y degree S"]);
+  }
+  if(percent<50) 
+  { new_letter["Y degree E"] = map(percent, 0, 50, oldObj["Y degree E"],360);}
+  else{
+    new_letter["Y degree E"] = map(percent, 50, 100, 360 , newObj["Y degree E"]);
+  }
+
+```
+![preview (34)](https://github.com/23-2-DSDN242/time-based-media-lucycocoa/assets/140350024/e037d0a5-efad-490a-9e38-414879d53433)

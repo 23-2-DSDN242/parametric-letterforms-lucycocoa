@@ -1,6 +1,6 @@
 /* these are optional special variables which will change the system */
-var systemBackgroundColor = "white";
-// var systemBackgroundColor = "#ebe3da";//beige bg
+// var systemBackgroundColor = "white";
+var systemBackgroundColor = "#ebe3da";//beige bg
 var systemLineColor = "black";
 var systemBoxColor = "#C73869";
 
@@ -17,12 +17,11 @@ const strokeColor  = "#0a2d27";
  * from (0,0) to (100, 200)
  */
 function drawLetter(letterData) {
-  // color/stroke setup
-  noStroke();
+
   
 
 
-  // determine parameters for second circle
+  // determine parameters 
   let posx=50
   let posy=100
   let size = letterData["size"];
@@ -48,24 +47,14 @@ function drawLetter(letterData) {
   
   
 
-  // draw two circles
+ 
   angleMode(DEGREES)
-  // fill(darkGreen);
-  // ellipse(50, 150, 75, 75);
-  // fill(lightGreen);
-  // ellipse(Rposx, Rposy, size2, size2);
+
 
   
-  strokeWeight(20)
+  strokeWeight(18)
   noFill();
-  // stroke(216,47,32,220) //red
-  // arc(Rposx,Rposy,size,size,RdegreeStart,RdegreeEnd)
-  // stroke(40,39,126,220) //blue
-  // arc(Bposx,Bposy,size2,size2,BdegreeStart,BdegreeEnd)
-  // stroke(48,111,70,220) //green
-  // arc(Gposx,Gposy,size3,size3,GdegreeStart,GdegreeEnd)
-  // stroke(233,169,59,220) //yellow
-  // arc(Yposx,Yposy,size4,size4,YdegreeStart,YdegreeEnd)
+
   stroke(216,47,32,200) //red
   arc(Rposx,Rposy,size,size,RdegreeStart,RdegreeEnd)
   stroke(40,39,126,200) //blue
@@ -75,15 +64,60 @@ function drawLetter(letterData) {
   stroke(233,169,59,200) //yellow
   arc(Yposx,Yposy,size4,size4,YdegreeStart,YdegreeEnd)
   
-
+  
+  strokeWeight(1)
 
 }
 
+
 function interpolate_letter(percent, oldObj, newObj) {
   let new_letter = {};
+  // if(percent<50) 
+  // { new_letter["R degree S"] = map(percent, 0, 50, oldObj["R degree S"],360);}
+  // else{
+  //   new_letter["R degree S"] = map(percent, 0, 100, 360 , newObj["R degree S"]);
+  // }
+
+
+  if(oldObj["G degree S"] > newObj["G degree S"]) {
+    newObj["G degree S"] = newObj["G degree S"] + 360;
+  } 
+  if(oldObj["G degree E"] > newObj["G degree E"]) {
+    newObj["G degree E"] = newObj["G degree E"] + 360;
+  } 
+  
+
+
   new_letter["size"]    = map(percent, 0, 100, oldObj["size"], newObj["size"]);
   new_letter["offsetx"] = map(percent, 0, 100, oldObj["offsetx"], newObj["offsetx"]);
   new_letter["offsety"] = map(percent, 0, 100, oldObj["offsety"], newObj["offsety"]);
+  new_letter["R degree S"] = map(percent, 0, 100, oldObj["R degree S"], newObj["R degree S"]);
+  new_letter["R degree E"] = map(percent, 0, 100, oldObj["R degree E"], newObj["R degree E"]);
+  
+  new_letter["Bsize"] = map(percent, 0, 100, oldObj["Bsize"], newObj["Bsize"]);
+  new_letter["offset2x"] = map(percent, 0, 100, oldObj["offset2x"], newObj["offset2x"]);
+  new_letter["offset2y"] = map(percent, 0, 100, oldObj["offset2y"], newObj["offset2y"]);
+  new_letter["B degree S"] = map(percent, 0, 100, oldObj["B degree S"], newObj["B degree S"]);
+  new_letter["B degree E"] = map(percent, 0, 100, oldObj["B degree E"], newObj["B degree E"]);
+
+  new_letter["Gsize"] = map(percent, 0, 100, oldObj["Gsize"], newObj["Gsize"]);
+  new_letter["offset3x"] = map(percent, 0, 100, oldObj["offset3x"], newObj["offset3x"]);
+  new_letter["offset3y"] = map(percent, 0, 100, oldObj["offset3y"], newObj["offset3y"]);
+  new_letter["G degree S"] = map(percent, 0, 100, oldObj["G degree S"], newObj["G degree S"]);
+  new_letter["G degree E"] = map(percent, 0, 100, oldObj["G degree E"], newObj["G degree E"]);
+
+  new_letter["Ysize"] = map(percent, 0, 100, oldObj["Ysize"], newObj["Ysize"]);
+  new_letter["offset4x"] = map(percent, 0, 100, oldObj["offset4x"], newObj["offset4x"]);
+  new_letter["offset4y"] = map(percent, 0, 100, oldObj["offset4y"], newObj["offset4y"]);
+  new_letter["Y degree S"] = map(percent, 0, 100, oldObj["Y degree S"], newObj["Y degree S"]);
+  new_letter["Y degree E"] = map(percent, 0, 100, oldObj["Y degree E"], newObj["Y degree E"]);
+  
+  if(oldObj["R degree S"] == newObj["R degree S"] ) {
+    new_letter["R degree S"] = newObj["R degree S"] 
+  }
+  
+  
+  
   return new_letter;
 }
 

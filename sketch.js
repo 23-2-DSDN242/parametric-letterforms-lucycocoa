@@ -14,7 +14,7 @@ const canvasHeight = 500;
 
 const letterA = {
   "size1": 150,
-  "size": 0,
+  "size2": 0,
   "offsetx": 0,
   "offsety": 0,
   "offsetx3": 0,
@@ -26,19 +26,19 @@ const letterA = {
 
 const letterB = {
   "size1": 0,
-  "size": 70,
+  "size2": 70,
   "offsetx": -60,
   "offsety": 0,
   "offsetx3": -20,
   "offsety3": -20,
-  "sizeb":90,
+  "size3":90,
   "offsetxellipse": -51,
   "offsetyellipse": -80
 }
 
 const letterC = {
   "size1": 150,
-  "size": 0,
+  "size2": 0,
   "offsetx": 0,
   "offsety": 280,
   "offsetx3": 0,
@@ -86,8 +86,8 @@ function draw () {
 function drawLetter(posx, posy, letterData) {
   // determine parameters for second circle
   let size1 = letterData["size1"];
-  let size2 = letterData["size"];
-  let size3 = letterData["sizeb"];
+  let size2 = letterData["size2"];
+  let size3 = letterData["size3"];
   //3 arcs
 
   let pos2x = posx + letterData["offsetx"];

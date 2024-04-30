@@ -77,4 +77,4 @@ if(oldObj["G degree S"] > newObj["G degree S"]) {
     newObj["G degree E"] = newObj["G degree E"] + 360;
   } 
   ```
-<img width="945" alt="Screenshot 2024-04-30 at 7 45 41 PM" src="https://github.com/23-2-DSDN242/time-based-media-lucycocoa/assets/140350024/f48356e7-e955-4a42-94f5-f316afc83c5d">
+<img width="945" alt="Screenshot 2024-04-30 at 8 16 23 PM" src="https://github.com/23-2-DSDN242/time-based-media-lucycocoa/assets/140350024/92e97eaf-57e4-4819-9386-9b2aae5ae9ae">

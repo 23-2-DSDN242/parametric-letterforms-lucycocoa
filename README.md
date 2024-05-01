@@ -110,7 +110,13 @@ if(oldObj["G degree S"] > newObj["G degree S"]) {
 
 This code was applied not only to the green arc but also to all other colors to ensure that the arcs in all letters rotate clockwise.
 
-However, there was an issue where shapes with a 360 degree angle for red, blue, and yellow arcs were not drawn properly. To address this, I added 360 to each angle's start and ending value and then used the remainder when divided by 360 to correct the values.
+However, there was an issue where shapes with a 360 degree angle for arcs were not drawn properly. 
+
+<img width="945" alt="Screenshot 2024-04-30 at 9 55 51 PM" src="https://github.com/23-2-DSDN242/time-based-media-lucycocoa/assets/140350024/c3cb6c08-a0ec-4026-b824-8467a0a46167">
+<img width="945" alt="Screenshot 2024-04-30 at 9 55 55 PM" src="https://github.com/23-2-DSDN242/time-based-media-lucycocoa/assets/140350024/1f2dc122-8736-40e0-96d0-6ac6015047a7">
+
+
+To address this, I added 360 to each angle's start and ending value and then used the remainder when divided by 360 to correct the values.
 
 ``` if(oldObj["R degree S"] > newObj["R degree S"]) {
     newObj["R degree S"] = (newObj["R degree S"] + 360) % 360;
@@ -120,11 +126,48 @@ However, there was an issue where shapes with a 360 degree angle for red, blue, 
   } 
   ```
 
-<img width="945" alt="Screenshot 2024-04-30 at 9 55 51 PM" src="https://github.com/23-2-DSDN242/time-based-media-lucycocoa/assets/140350024/c3cb6c08-a0ec-4026-b824-8467a0a46167">
-<img width="945" alt="Screenshot 2024-04-30 at 9 55 55 PM" src="https://github.com/23-2-DSDN242/time-based-media-lucycocoa/assets/140350024/1f2dc122-8736-40e0-96d0-6ac6015047a7">
+But still it did not fix the issue and I came up with a different method.
+
+I made another function name 'adjustclockwise', and I applied this function into all the degrees, and it worked!
+
+```
+function adjustForClockwise(start, end) {
+    if (start > end) { // adjusting the strokes rotatinf clockwise
+      end += 360;
+    }
+    return map(percent, 0, 100, start, end);
+  }
+
+  new_letter["size"]    = map(percent, 0, 100, oldObj["size"], newObj["size"]);
+  new_letter["offsetx"] = map(percent, 0, 100, oldObj["offsetx"], newObj["offsetx"]);
+  new_letter["offsety"] = map(percent, 0, 100, oldObj["offsety"], newObj["offsety"]);
+  new_letter["R degree S"] = adjustForClockwise(oldObj["R degree S"], newObj["R degree S"]);
+  new_letter["R degree E"] = adjustForClockwise(oldObj["R degree E"], newObj["R degree E"]);
+
+  new_letter["Bsize"] = map(percent, 0, 100, oldObj["Bsize"], newObj["Bsize"]);
+  new_letter["offset2x"] = map(percent, 0, 100, oldObj["offset2x"], newObj["offset2x"]);
+  new_letter["offset2y"] = map(percent, 0, 100, oldObj["offset2y"], newObj["offset2y"]);
+  new_letter["B degree S"] = adjustForClockwise(oldObj["B degree S"], newObj["B degree S"]);
+  new_letter["B degree E"] = adjustForClockwise(oldObj["B degree E"], newObj["B degree E"]);
+
+  new_letter["Gsize"] = map(percent, 0, 100, oldObj["Gsize"], newObj["Gsize"]);
+  new_letter["offset3x"] = map(percent, 0, 100, oldObj["offset3x"], newObj["offset3x"]);
+  new_letter["offset3y"] = map(percent, 0, 100, oldObj["offset3y"], newObj["offset3y"]);
+  new_letter["G degree S"] = adjustForClockwise(oldObj["G degree S"], newObj["G degree S"]);
+  new_letter["G degree E"] = adjustForClockwise(oldObj["G degree E"], newObj["G degree E"]);
+
+  new_letter["Ysize"] = map(percent, 0, 100, oldObj["Ysize"], newObj["Ysize"]);
+  new_letter["offset4x"] = map(percent, 0, 100, oldObj["offset4x"], newObj["offset4x"]);
+  new_letter["offset4y"] = map(percent, 0, 100, oldObj["offset4y"], newObj["offset4y"]);
+  new_letter["Y degree S"] = adjustForClockwise(oldObj["Y degree S"], newObj["Y degree S"]);
+  new_letter["Y degree E"] = adjustForClockwise(oldObj["Y degree E"], newObj["Y degree E"]);
+
+````
+
+![preview (52)](https://github.com/23-2-DSDN242/time-based-media-lucycocoa/assets/140350024/d3b7f2e7-1dac-4add-83de-0c9296829f2e)
 
 
-
+*******
 
 
 I attempted to use this code to add more animation, intending for shapes drawn at 360 degrees to return to a vertically aligned state at the 50% interpolation point before transitioning to a new letter.

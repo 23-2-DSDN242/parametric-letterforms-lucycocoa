@@ -124,8 +124,10 @@ However, there was an issue where shapes with a 360 degree angle for red, blue, 
 <img width="945" alt="Screenshot 2024-04-30 at 9 55 55 PM" src="https://github.com/23-2-DSDN242/time-based-media-lucycocoa/assets/140350024/1f2dc122-8736-40e0-96d0-6ac6015047a7">
 
 
-I attempted to use this code to add more animation, intending for shapes drawn at 360 degrees to return to a vertically aligned state at the 50% interpolation point before transitioning to a new letter.
 
+
+
+I attempted to use this code to add more animation, intending for shapes drawn at 360 degrees to return to a vertically aligned state at the 50% interpolation point before transitioning to a new letter.
 
 ```
 if(percent<50) 
@@ -237,3 +239,5 @@ if(percent<50)
 
 ```
 ![preview (34)](https://github.com/23-2-DSDN242/time-based-media-lucycocoa/assets/140350024/e037d0a5-efad-490a-9e38-414879d53433)
+
+However, upon consideration, I opted not to apply this interpolation as I found the original animation to be more visually appealing and looked cleaner.

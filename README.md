@@ -270,7 +270,23 @@ However, upon consideration, I opted not to apply these interpolations as I foun
 
 # Exhibition
 
-I named my font design "Bossbaby" because it contains my favorite letters 'A', 'B', 'S', and 'Y', and these letters collectively form the word. Additionally, the rounded design and colourful aesthetic of the font remind me of baby toys, which I find to be a perfect fit for the playful and lively vibe I wanted to convey with this font.
+I named my font design "Bossbaby" because it contains my favorite designed letters 'A', 'B', 'S', and 'Y', and these letters collectively form the word. Additionally, the rounded design and colourful aesthetic of the font remind me of baby toys, which I find to be a perfect fit for the playful and lively vibe I wanted to convey with this font.
 
-![preview (40)](https://github.com/23-2-DSDN242/time-based-media-lucycocoa/assets/140350024/dc700faa-8548-430b-8478-6070a2457d53)
+
 ![preview (51)](https://github.com/23-2-DSDN242/time-based-media-lucycocoa/assets/140350024/66d139c2-8057-4736-a834-101ba213c374)
+
+******
+
+
+![preview (38)](https://github.com/23-2-DSDN242/time-based-media-lucycocoa/assets/140350024/1fea3725-39af-4a62-8d81-8bbbd0c91a76)
+![preview (39)](https://github.com/23-2-DSDN242/time-based-media-lucycocoa/assets/140350024/4ff5cfd9-e758-4aae-9212-4a3929277e95)
+![preview (41)](https://github.com/23-2-DSDN242/time-based-media-lucycocoa/assets/140350024/b48700dd-8833-4bb8-b26d-ed55ad70d381)
+![preview (42)](https://github.com/23-2-DSDN242/time-based-media-lucycocoa/assets/140350024/27098cff-c525-4afd-bd3b-7a08cb376c7a)
+![preview (43)](https://github.com/23-2-DSDN242/time-based-media-lucycocoa/assets/140350024/49e06807-c1a9-42d1-aef3-b017221ea835)
+![preview (44)](https://github.com/23-2-DSDN242/time-based-media-lucycocoa/assets/140350024/e3c22c4b-651e-4671-93d3-1a2157ad7a91)
+![preview (45)](https://github.com/23-2-DSDN242/time-based-media-lucycocoa/assets/140350024/fb875ea1-6b4c-48a3-9e16-8023a10bf852)
+![preview (46)](https://github.com/23-2-DSDN242/time-based-media-lucycocoa/assets/140350024/21146fb7-d5de-481f-8bbe-d6013aaac3f8)
+![preview (47)](https://github.com/23-2-DSDN242/time-based-media-lucycocoa/assets/140350024/3e3a96c8-f15c-4308-acb7-140a1fe36868)
+![preview (48)](https://github.com/23-2-DSDN242/time-based-media-lucycocoa/assets/140350024/1c69f21c-0fb7-442a-910c-0cecdbac8656)
+
+********

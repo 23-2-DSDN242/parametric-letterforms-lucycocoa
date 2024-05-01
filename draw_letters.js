@@ -154,9 +154,9 @@ function interpolate_letter(percent, oldObj, newObj) {
   // }
 
   if(percent<50) 
-  { new_letter["Ysize"] = map(percent, 0, 50, oldObj["Ysize"],10);}
+  { new_letter["Ysize"] = map(percent, 0, 50, oldObj["Ysize"],-10);}
   else{
-    new_letter["Ysize"] = map(percent, 50, 100, 10 , newObj["Ysize"]);
+    new_letter["Ysize"] = map(percent, 50, 100, -10 , newObj["Ysize"]);
   }
   // if(percent<50) 
   // { new_letter["offset4x"] = map(percent, 0, 50, oldObj["offset4x"],0);}
@@ -205,7 +205,7 @@ function interpolate_letter(percent, oldObj, newObj) {
     newObj["Y degree E"] = (newObj["Y degree E"]) 
   } 
   if(oldObj["G degree S"] > newObj["G degree S"]) {
-    newObj["G degree S"] = (newObj["G degree S"] + 360) 
+    newObj["G degree S"] = (newObj["G degree S"] +  360) 
   }
   if(oldObj["G degree E"] > newObj["G degree E"]) {
     newObj["G degree E"] = (newObj["G degree E"] + 360) 

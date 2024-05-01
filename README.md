@@ -262,7 +262,15 @@ if(percent<50)
     new_letter["Ysize"] = map(percent, 50, 100, 10 , newObj["Ysize"]);
   }
   ```
-  ![preview (35)](https://github.com/23-2-DSDN242/time-based-media-lucycocoa/assets/140350024/1a69970a-09cd-418e-a6f6-2c993adf0b5c)
-
+![preview (37)](https://github.com/23-2-DSDN242/time-based-media-lucycocoa/assets/140350024/69a8adf3-27b0-4614-ac27-4b5ee38de71d)
 *****
-However, upon consideration, I opted not to apply this interpolation as I found the original animation to be more visually appealing and looked cleaner.
+
+However, upon consideration, I opted not to apply these interpolations as I found the original animation to be more visually appealing and looked cleaner.
+
+
+# Exhibition
+
+I named my font design "Bossbaby" because it contains my favorite letters 'A', 'B', 'S', and 'Y', and these letters collectively form the word. Additionally, the rounded design and colourful aesthetic of the font remind me of baby toys, which I find to be a perfect fit for the playful and lively vibe I wanted to convey with this font.
+
+![preview (40)](https://github.com/23-2-DSDN242/time-based-media-lucycocoa/assets/140350024/dc700faa-8548-430b-8478-6070a2457d53)
+![preview (51)](https://github.com/23-2-DSDN242/time-based-media-lucycocoa/assets/140350024/66d139c2-8057-4736-a834-101ba213c374)

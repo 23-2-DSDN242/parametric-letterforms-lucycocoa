@@ -240,4 +240,29 @@ if(percent<50)
 ```
 ![preview (34)](https://github.com/23-2-DSDN242/time-based-media-lucycocoa/assets/140350024/e037d0a5-efad-490a-9e38-414879d53433)
 
+*****
+OTHER VARIATIONS
+
+when arc stroke's sizes are 100.
+```
+if(percent<50) 
+  { new_letter["Ysize"] = map(percent, 0, 50, oldObj["Ysize"],100);}
+  else{
+    new_letter["Ysize"] = map(percent, 50, 100, 100 , newObj["Ysize"]);
+  }
+  ```
+![preview (35)](https://github.com/23-2-DSDN242/time-based-media-lucycocoa/assets/140350024/80123c70-85fd-46be-aaa3-9c29f4c66f59)
+
+when arc stroke's sizes are 10.
+
+```
+if(percent<50) 
+  { new_letter["Ysize"] = map(percent, 0, 50, oldObj["Ysize"],10);}
+  else{
+    new_letter["Ysize"] = map(percent, 50, 100, 10 , newObj["Ysize"]);
+  }
+  ```
+  ![preview (35)](https://github.com/23-2-DSDN242/time-based-media-lucycocoa/assets/140350024/1a69970a-09cd-418e-a6f6-2c993adf0b5c)
+
+*****
 However, upon consideration, I opted not to apply this interpolation as I found the original animation to be more visually appealing and looked cleaner.

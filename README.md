@@ -34,6 +34,8 @@ After realizing that I only drew a,b and c but needed nine parameters, I reconsi
 
 # Design the Alphabet
 
+My design concept revolves around creating a vibrant and engaging visual experience that captures the essence of joy and playfulness, with eye-catching and memorable imagery featuring fun, cartoon-like figures. Additionally, I believe that the essence of font design lies in readability, designing a legible font is also a crucial goal for me in this project.
+
 My final alphabet design consists of four arc strokes, with a diverse colour combination. To ensure a natural overlap between the arc strokes and create a seamless effect, I lowered the opacity, allowing different colours to blend when overlapped.
 
 ```
@@ -86,7 +88,7 @@ In composing my design, I utilized precisely 20 parameters, each determining the
 
 Each letter was designed to prominently feature the arc's curves, with delicated attention to achieving the most harmonious colour arrangements.
 
-In designing the numbers, a distinct approach was taken to ensure they did not bear too much resemblance to the letters. Except for '0', the numbers were designed by overlapping two strokes to create a single one, ensuring a distinct visual appearance from the letters.
+In designing the numbers, a distinct approach was taken to ensure they did not bear too much resemblance to the letters.(Z and 2, T and 7 or O and 0) Except for '0', the numbers were designed by overlapping two strokes to create a single one, ensuring a distinct visual appearance from the letters.
 
  <img width="945" alt="Screenshot 2024-04-30 at 8 28 32 PM" src="https://github.com/23-2-DSDN242/time-based-media-lucycocoa/assets/140350024/cb9e96c9-ca31-4b54-a7d4-830137cd58c2">
 
@@ -128,7 +130,7 @@ To address this, I added 360 to each angle's start and ending value and then use
 
 But still it did not fix the issue and I came up with a different method.
 
-I made another function name 'adjustclockwise', and I applied this function into all the degrees, and it worked!
+I created a function called 'adjustForClockwise' and applied it to all the angle values, which successfully resolved the issue!
 
 ```
 function adjustForClockwise(start, end) {
@@ -188,7 +190,6 @@ if(percent<50)
   else{
     new_letter["offsety"] = map(percent, 50, 100, -40 , newObj["offsety"]);
   }
-
   if(percent<50) 
   { new_letter["R degree S"] = map(percent, 0, 50, oldObj["R degree S"],0);}
   else{
@@ -215,7 +216,6 @@ if(percent<50)
   else{
     new_letter["offset2y"] = map(percent, 50, 100, -12 , newObj["offset2y"]);
   }
-
   if(percent<50) 
   { new_letter["B degree S"] = map(percent, 0, 50, oldObj["B degree S"],0);}
   else{
@@ -226,6 +226,7 @@ if(percent<50)
   else{
     new_letter["B degree E"] = map(percent, 50, 100, 360 , newObj["B degree E"]);
   }
+
   if(percent<50) 
   { new_letter["Gsize"] = map(percent, 0, 50, oldObj["Gsize"],3);}
   else{
@@ -241,7 +242,6 @@ if(percent<50)
   else{
     new_letter["offset3y"] = map(percent, 50, 100, 20 , newObj["offset3y"]);
   }
-
   if(percent<50) 
   { new_letter["G degree S"] = map(percent, 0, 50, oldObj["G degree S"],0);}
   else{
@@ -268,7 +268,6 @@ if(percent<50)
   else{
     new_letter["offset4y"] = map(percent, 50, 100, 50 , newObj["offset4y"]);
   }
-
   if(percent<50) 
   { new_letter["Y degree S"] = map(percent, 0, 50, oldObj["Y degree S"],0);}
   else{
@@ -286,7 +285,7 @@ if(percent<50)
 *****
 OTHER VARIATIONS
 
-when arc stroke's sizes are 100.
+ arc stroke's sizes are 100.
 ```
 if(percent<50) 
   { new_letter["Ysize"] = map(percent, 0, 50, oldObj["Ysize"],100);}
@@ -296,7 +295,7 @@ if(percent<50)
   ```
 ![preview (35)](https://github.com/23-2-DSDN242/time-based-media-lucycocoa/assets/140350024/80123c70-85fd-46be-aaa3-9c29f4c66f59)
 
-when arc stroke's sizes are 10.
+ arc stroke's sizes are 10.
 
 ```
 if(percent<50) 
@@ -306,9 +305,81 @@ if(percent<50)
   }
   ```
 ![preview (37)](https://github.com/23-2-DSDN242/time-based-media-lucycocoa/assets/140350024/69a8adf3-27b0-4614-ac27-4b5ee38de71d)
+
+
+ arc stroke's sizes are 10 & located in the centre point at 50%
+
+```
+if(percent<50) 
+  { new_letter["Ysize"] = map(percent, 0, 50, oldObj["Ysize"],10);}
+  else{
+    new_letter["Ysize"] = map(percent, 50, 100, 10 , newObj["Ysize"]);
+  }
+  if(percent<50) 
+  { new_letter["offset4x"] = map(percent, 0, 50, oldObj["offset4x"],0);}
+  else{
+    new_letter["offset4x"] = map(percent, 50, 100, 0 , newObj["offset4x"]);
+  }
+  if(percent<50) 
+  { new_letter["offset4y"] = map(percent, 0, 50, oldObj["offset4y"],0);}
+  else{
+    new_letter["offset4y"] = map(percent, 50, 100, 0 , newObj["offset4y"]);
+  }
+
+  ```
+
+![preview (53)](https://github.com/23-2-DSDN242/time-based-media-lucycocoa/assets/140350024/8379011d-dc5b-4284-9d42-76b33b7fb09e)
+![preview (54)](https://github.com/23-2-DSDN242/time-based-media-lucycocoa/assets/140350024/2732c11b-eb33-415a-afba-8c334ef80661)
+
+
+ arc stroke's sizes are 10 & located in the centre point at 10%
+
+```
+if(percent<50) 
+  { new_letter["Ysize"] = map(percent, 0, 10, oldObj["Ysize"],10);}
+  else{
+    new_letter["Ysize"] = map(percent, 10, 100, 10 , newObj["Ysize"]);
+  }
+  if(percent<50) 
+  { new_letter["offset4x"] = map(percent, 0, 10, oldObj["offset4x"],0);}
+  else{
+    new_letter["offset4x"] = map(percent, 10, 100, 0 , newObj["offset4x"]);
+  }
+  if(percent<50) 
+  { new_letter["offset4y"] = map(percent, 0, 10, oldObj["offset4y"],0);}
+  else{
+    new_letter["offset4y"] = map(percent, 10, 100, 0 , newObj["offset4y"]);
+  }
+
+  ```
+  ![preview (55)](https://github.com/23-2-DSDN242/time-based-media-lucycocoa/assets/140350024/06953bb5-08cc-4743-a88c-b060eb27c799)
+
+arc stroke's sizes are 60 & located in the centre point at 50%
+
+```
+if(percent<50) 
+  { new_letter["Ysize"] = map(percent, 0, 50, oldObj["Ysize"],60);}
+  else{
+    new_letter["Ysize"] = map(percent, 50, 100, 60 , newObj["Ysize"]);
+  }
+  if(percent<50) 
+  { new_letter["offset4x"] = map(percent, 0, 50, oldObj["offset4x"],0);}
+  else{
+    new_letter["offset4x"] = map(percent, 50, 100, 0 , newObj["offset4x"]);
+  }
+  if(percent<50) 
+  { new_letter["offset4y"] = map(percent, 0, 50, oldObj["offset4y"],0);}
+  else{
+    new_letter["offset4y"] = map(percent, 50, 100, 0 , newObj["offset4y"]);
+  }
+  ```
+  ![preview (57)](https://github.com/23-2-DSDN242/time-based-media-lucycocoa/assets/140350024/c1149bde-aa7b-45aa-bc6c-45c94fcccd95)
+
 *****
 
-However, upon consideration, I opted not to apply these interpolations as I found the original animation to be more visually appealing and looked cleaner.
+Upon consideration, I have decided to apply a stroke size of 60 and center it at the 50% as I found this configuration makes the animation more visually appealing and cleaner.
+
+
 
 
 # Exhibition

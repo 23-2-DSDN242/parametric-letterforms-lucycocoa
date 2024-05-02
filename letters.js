@@ -1,26 +1,29 @@
 const alphabet = {
   "default": {
 
-    "size": 50,
-    "offsetx": 0,
-    "offsety": -40,
-    "R degree S":0,
-    "R degree E":360,
-    "Bsize":50,
-    "offset2x": 0,
-    "offset2y": -12,
-    "B degree S":0,
-    "B degree E":360,
-    "Gsize":50,
-    "offset3x": 0,
-    "offset3y": 20,
-    "G degree S":0,
-    "G degree E":360,
-    "Ysize":50,
-    "offset4x": 0,
-    "offset4y": 50,
-    "Y degree S":0,
-    "Y degree E":360
+    "size": 50, // red arc's size
+    "offsetx": 0, // red arc's x pos
+    "offsety": -40, // red arc's y pos
+    "R degree S":0, // red arc's angle start value
+    "R degree E":360, // red arc's angle End value
+
+    "Bsize":50, // blue arc's size
+    "offset2x": 0, // blue arc's x pos
+    "offset2y": -12, // blue arc's y pos
+    "B degree S":0, // blue arc's angle start value
+    "B degree E":360, // blue arc's angle End value
+
+    "Gsize":50, //green arc's size
+    "offset3x": 0, //green arc's x pos
+    "offset3y": 20, //green arc's y pos
+    "G degree S":0, //green arc's angle start value
+    "G degree E":360, //green arc's angle End value
+
+    "Ysize":50, //yellow arc's size
+    "offset4x": 0, //yellow arc's x pos
+    "offset4y": 50, //yellow arc's y pos
+    "Y degree S":0, //yellow arc's angle start value
+    "Y degree E":360 //yellow arc's angle End value
    
   },
   "A": {

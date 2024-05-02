@@ -4,10 +4,6 @@ var systemBackgroundColor = "#ebe3da";//beige bg
 var systemLineColor = "black";
 var systemBoxColor = "#C73869";
 
-/* internal constants */
-const darkGreen  = "#26b29d";
-const lightGreen  = "#30dfc4";
-const strokeColor  = "#0a2d27";
 
 /*
  * Draw the letter given the letterData
@@ -21,7 +17,7 @@ function drawLetter(letterData) {
   
 
 
-  // determine parameters 
+  //  determine parameters 
   let posx=50
   let posy=100
   let size = letterData["size"];
@@ -47,11 +43,7 @@ function drawLetter(letterData) {
   
   
 
- 
   angleMode(DEGREES)
-
-
-  
   strokeWeight(18)
   noFill();
 
@@ -65,7 +57,7 @@ function drawLetter(letterData) {
   arc(Yposx,Yposy,size4,size4,YdegreeStart,YdegreeEnd)
   
   
-  strokeWeight(1)
+  strokeWeight(1) //this keep the percentage number font's stroke size
 
 }
 
@@ -75,203 +67,102 @@ function interpolate_letter(percent, oldObj, newObj) {
   let new_letter = {};
 
   if(percent<50) 
-  { new_letter["size"] = map(percent, 0, 50, oldObj["size"],10);}
+  { new_letter["size"] = map(percent, 0, 50, oldObj["size"],60);}
   else{
-    new_letter["size"] = map(percent, 50, 100, 10 , newObj["size"]);
-  }
-  // if(percent<50) 
-  // { new_letter["offsetx"] = map(percent, 0, 50, oldObj["offsetx"],0);}
-  // else{
-  //   new_letter["offsetx"] = map(percent, 50, 100, 0 , newObj["offsetx"]);
-  // }
-  // if(percent<50) 
-  // { new_letter["offsety"] = map(percent, 0, 50, oldObj["offsety"],-40);}
-  // else{
-  //   new_letter["offsety"] = map(percent, 50, 100, -40 , newObj["offsety"]);
-  // }
-  // if(percent<50) 
-  // { new_letter["R degree S"] = map(percent, 0, 50, oldObj["R degree S"],0);}
-  // else{
-  //   new_letter["R degree S"] = map(percent, 50, 100, 0 , newObj["R degree S"]);
-  // }
-  // if(percent<50) 
-  // { new_letter["R degree E"] = map(percent, 0, 50, oldObj["R degree E"],360);}
-  // else{
-  //   new_letter["R degree E"] = map(percent, 50, 100, 360 , newObj["R degree E"]);
-  // }
-  
-  if(percent<50) 
-  { new_letter["Bsize"] = map(percent, 0, 50, oldObj["Bsize"],10);}
-  else{
-    new_letter["Bsize"] = map(percent, 50, 100, 10 , newObj["Bsize"]);
-  }
-  // if(percent<50) 
-  // { new_letter["offset2x"] = map(percent, 0, 50, oldObj["offset2x"],0);}
-  // else{
-  //   new_letter["offset2x"] = map(percent, 50, 100, 0 , newObj["offset2x"]);
-  // }
-  // if(percent<50) 
-  // { new_letter["offset2y"] = map(percent, 0, 50, oldObj["offset2y"],-12);}
-  // else{
-  //   new_letter["offset2y"] = map(percent, 50, 100, -12 , newObj["offset2y"]);
-  // }
-  // if(percent<50) 
-  // { new_letter["B degree S"] = map(percent, 0, 50, oldObj["B degree S"],0);}
-  // else{
-  //   new_letter["B degree S"] = map(percent, 50, 100, 0 , newObj["B degree S"]);
-  // }
-  // if(percent<50) 
-  // { new_letter["B degree E"] = map(percent, 0, 50, oldObj["B degree E"],360);}
-  // else{
-  //   new_letter["B degree E"] = map(percent, 50, 100, 360 , newObj["B degree E"]);
-  // }
+    new_letter["size"] = map(percent, 50, 100, 60 , newObj["size"]);
+  } // keep the size '60' at 50%
 
   if(percent<50) 
-  { new_letter["Gsize"] = map(percent, 0, 50, oldObj["Gsize"],10);}
+  { new_letter["offsetx"] = map(percent, 0, 50, oldObj["offsetx"],0);}
   else{
-    new_letter["Gsize"] = map(percent, 50, 100, 10 , newObj["Gsize"]);
+    new_letter["offsetx"] = map(percent, 50, 100, 0 , newObj["offsetx"]);
   }
-  // if(percent<50) 
-  // { new_letter["offset3x"] = map(percent, 0, 50, oldObj["offset3x"],0);}
-  // else{
-  //   new_letter["offset3x"] = map(percent, 50, 100, 0 , newObj["offset3x"]);
-  // }
-  // if(percent<50) 
-  // { new_letter["offset3y"] = map(percent, 0, 50, oldObj["offset3y"],20);}
-  // else{
-  //   new_letter["offset3y"] = map(percent, 50, 100, 20 , newObj["offset3y"]);
-  // }
-
-  // if(percent<50) 
-  // { new_letter["G degree S"] = map(percent, 0, 50, oldObj["G degree S"],0);}
-  // else{
-  //   new_letter["G degree S"] = map(percent, 50, 100, 0 , newObj["G degree S"]);
-  // }
-  // if(percent<50) 
-  // { new_letter["G degree E"] = map(percent, 0, 50, oldObj["G degree E"],360);}
-  // else{
-  //   new_letter["G degree E"] = map(percent, 50, 100, 360 , newObj["G degree E"]);
-  // }
+  if(percent<50) 
+  { new_letter["offsety"] = map(percent, 0, 50, oldObj["offsety"],0);}
+  else{
+    new_letter["offsety"] = map(percent, 50, 100, 0 , newObj["offsety"]);
+  }
+    // Place the arc's in the centre point at 50%
+    // RED ARC
 
   if(percent<50) 
-  { new_letter["Ysize"] = map(percent, 0, 50, oldObj["Ysize"],10);}
+  { new_letter["Bsize"] = map(percent, 0, 50, oldObj["Bsize"],60);}
   else{
-    new_letter["Ysize"] = map(percent, 50, 100, 10 , newObj["Ysize"]);
+    new_letter["Bsize"] = map(percent, 50, 100, 60 , newObj["Bsize"]);
   }
-  // if(percent<50) 
-  // { new_letter["offset4x"] = map(percent, 0, 50, oldObj["offset4x"],0);}
-  // else{
-  //   new_letter["offset4x"] = map(percent, 50, 100, 0 , newObj["offset4x"]);
-  // }
-  // if(percent<50) 
-  // { new_letter["offset4y"] = map(percent, 0, 50, oldObj["offset4y"],50);}
-  // else{
-  //   new_letter["offset4y"] = map(percent, 50, 100, 50 , newObj["offset4y"]);
-  // }
-  // if(percent<50) 
-  // { new_letter["Y degree S"] = map(percent, 0, 50, oldObj["Y degree S"],0);}
-  // else{
-  //   new_letter["Y degree S"] = map(percent, 50, 100, 0 , newObj["Y degree S"]);
-  // }
-  // if(percent<50) 
-  // { new_letter["Y degree E"] = map(percent, 0, 50, oldObj["Y degree E"],360);}
-  // else{
-  //   new_letter["Y degree E"] = map(percent, 50, 100, 360 , newObj["Y degree E"]);
-  // }
-
-
-
-
-
-  // if(oldObj["R degree S"] > newObj["R degree S"]) {
-  //   newObj["R degree S"] = (newObj["R degree S"] +360) 
-  // } 
-  // if(oldObj["R degree E"] > newObj["R degree E"]) {
-  //   newObj["R degree E"] = (newObj["R degree E"] +360)
-  // } 
-
-  // if(oldObj["B degree S"] > newObj["B degree S"]) {
-  //   newObj["B degree S"] = (newObj["B degree S"] )
-  // } 
-  // if(oldObj["B degree E"] > newObj["B degree E"]) {
-  //   newObj["B degree E"] = (newObj["B degree E"] )
-  // } 
-  
-  // if(oldObj["Y degree S"] > newObj["Y degree S"]) {
-  //   newObj["Y degree S"] = (newObj["Y degree S"] ) 
-  // } 
-  // if(oldObj["Y degree E"] > newObj["Y degree E"]) {
-  //   newObj["Y degree E"] = (newObj["Y degree E"]) 
-  // } 
-  // if(oldObj["G degree S"] > newObj["G degree S"]) {
-  //   newObj["G degree S"] = (newObj["G degree S"] +  360) 
-  // }
-  // if(oldObj["G degree E"] > newObj["G degree E"]) {
-  //   newObj["G degree E"] = (newObj["G degree E"] + 360) 
-  // } 
-
-
-
-  // // new_letter["size"]    = map(percent, 0, 100, oldObj["size"], newObj["size"]);
-  // new_letter["offsetx"] = map(percent, 0, 100, oldObj["offsetx"], newObj["offsetx"]);
-  // new_letter["offsety"] = map(percent, 0, 100, oldObj["offsety"], newObj["offsety"]);
-  // new_letter["R degree S"] = map(percent, 0, 100, oldObj["R degree S"], newObj["R degree S"]);
-  // new_letter["R degree E"] = map(percent, 0, 100, oldObj["R degree E"], newObj["R degree E"]);
-  
-  // // new_letter["Bsize"] = map(percent, 0, 100, oldObj["Bsize"], newObj["Bsize"]);
-  // new_letter["offset2x"] = map(percent, 0, 100, oldObj["offset2x"], newObj["offset2x"]);
-  // new_letter["offset2y"] = map(percent, 0, 100, oldObj["offset2y"], newObj["offset2y"]);
-  // new_letter["B degree S"] = map(percent, 0, 100, oldObj["B degree S"], newObj["B degree S"]);
-  // new_letter["B degree E"] = map(percent, 0, 100, oldObj["B degree E"], newObj["B degree E"]);
-
-  // // new_letter["Gsize"] = map(percent, 0, 100, oldObj["Gsize"], newObj["Gsize"]);
-  // new_letter["offset3x"] = map(percent, 0, 100, oldObj["offset3x"], newObj["offset3x"]);
-  // new_letter["offset3y"] = map(percent, 0, 100, oldObj["offset3y"], newObj["offset3y"]);
-  // new_letter["G degree S"] = map(percent, 0, 100, oldObj["G degree S"], newObj["G degree S"]);
-  // new_letter["G degree E"] = map(percent, 0, 100, oldObj["G degree E"], newObj["G degree E"]);
-
-  // // new_letter["Ysize"] = map(percent, 0, 100, oldObj["Ysize"], newObj["Ysize"]);
-  // new_letter["offset4x"] = map(percent, 0, 100, oldObj["offset4x"], newObj["offset4x"]);
-  // new_letter["offset4y"] = map(percent, 0, 100, oldObj["offset4y"], newObj["offset4y"]);
-  // new_letter["Y degree S"] = map(percent, 0, 100, oldObj["Y degree S"], newObj["Y degree S"]);
-  // new_letter["Y degree E"] = map(percent, 0, 100, oldObj["Y degree E"], newObj["Y degree E"]);
+  if(percent<50) 
+  { new_letter["offset2x"] = map(percent, 0, 50, oldObj["offset2x"],0);}
+  else{
+    new_letter["offset2x"] = map(percent, 50, 100, 0 , newObj["offset2x"]);
+  }
+  if(percent<50) 
+  { new_letter["offset2y"] = map(percent, 0, 50, oldObj["offset2y"],0);}
+  else{
+    new_letter["offset2y"] = map(percent, 50, 100, 0 , newObj["offset2y"]);
+  }
+      // BLUE ARC
   
 
+  if(percent<50) 
+  { new_letter["Gsize"] = map(percent, 0, 50, oldObj["Gsize"],60);}
+  else{
+    new_letter["Gsize"] = map(percent, 50, 100, 60 , newObj["Gsize"]);
+  }
+  if(percent<50) 
+  { new_letter["offset3x"] = map(percent, 0, 50, oldObj["offset3x"],0);}
+  else{
+    new_letter["offset3x"] = map(percent, 50, 100, 0 , newObj["offset3x"]);
+  }
+  if(percent<50) 
+  { new_letter["offset3y"] = map(percent, 0, 50, oldObj["offset3y"],0);}
+  else{
+    new_letter["offset3y"] = map(percent, 50, 100, 0 , newObj["offset3y"]);
+  }
 
+     // GREEN ARC
 
+  if(percent<50) 
+  { new_letter["Ysize"] = map(percent, 0, 50, oldObj["Ysize"],60);}
+  else{
+    new_letter["Ysize"] = map(percent, 50, 100, 60 , newObj["Ysize"]);
+  }
+  if(percent<50) 
+  { new_letter["offset4x"] = map(percent, 0, 50, oldObj["offset4x"],0);}
+  else{
+    new_letter["offset4x"] = map(percent, 50, 100, 0 , newObj["offset4x"]);
+  }
+  if(percent<50) 
+  { new_letter["offset4y"] = map(percent, 0, 50, oldObj["offset4y"],0);}
+  else{
+    new_letter["offset4y"] = map(percent, 50, 100, 0 , newObj["offset4y"]);
+  }
+  
+      // YELLOW ARC
 
-  //////////////////////////////////////////////////////////////
 
   function adjustForClockwise(start, end) {
-    if (start > end) { // adjusting the strokes rotatinf clockwise
+    if (start > end) {                         // adjusting the strokes rotatinf clockwise
       end += 360;
     }
     return map(percent, 0, 100, start, end);
   }
 
-  // new_letter["size"]    = map(percent, 0, 100, oldObj["size"], newObj["size"]);
-  new_letter["offsetx"] = map(percent, 0, 100, oldObj["offsetx"], newObj["offsetx"]);
-  new_letter["offsety"] = map(percent, 0, 100, oldObj["offsety"], newObj["offsety"]);
+ 
   new_letter["R degree S"] = adjustForClockwise(oldObj["R degree S"], newObj["R degree S"]);
   new_letter["R degree E"] = adjustForClockwise(oldObj["R degree E"], newObj["R degree E"]);
 
-  // new_letter["Bsize"] = map(percent, 0, 100, oldObj["Bsize"], newObj["Bsize"]);
-  new_letter["offset2x"] = map(percent, 0, 100, oldObj["offset2x"], newObj["offset2x"]);
-  new_letter["offset2y"] = map(percent, 0, 100, oldObj["offset2y"], newObj["offset2y"]);
+
   new_letter["B degree S"] = adjustForClockwise(oldObj["B degree S"], newObj["B degree S"]);
   new_letter["B degree E"] = adjustForClockwise(oldObj["B degree E"], newObj["B degree E"]);
 
-  // new_letter["Gsize"] = map(percent, 0, 100, oldObj["Gsize"], newObj["Gsize"]);
-  new_letter["offset3x"] = map(percent, 0, 100, oldObj["offset3x"], newObj["offset3x"]);
-  new_letter["offset3y"] = map(percent, 0, 100, oldObj["offset3y"], newObj["offset3y"]);
+
   new_letter["G degree S"] = adjustForClockwise(oldObj["G degree S"], newObj["G degree S"]);
   new_letter["G degree E"] = adjustForClockwise(oldObj["G degree E"], newObj["G degree E"]);
 
-  // new_letter["Ysize"] = map(percent, 0, 100, oldObj["Ysize"], newObj["Ysize"]);
-  new_letter["offset4x"] = map(percent, 0, 100, oldObj["offset4x"], newObj["offset4x"]);
-  new_letter["offset4y"] = map(percent, 0, 100, oldObj["offset4y"], newObj["offset4y"]);
+
   new_letter["Y degree S"] = adjustForClockwise(oldObj["Y degree S"], newObj["Y degree S"]);
   new_letter["Y degree E"] = adjustForClockwise(oldObj["Y degree E"], newObj["Y degree E"]);
+
 
   if(oldObj["R degree S"] == newObj["R degree S"] ) {
     new_letter["R degree S"] = newObj["R degree S"] 
@@ -285,6 +176,11 @@ function interpolate_letter(percent, oldObj, newObj) {
 
 var swapWords = [
   "BOSSBABY",
-  "ABBAABBA",
-  "PRESSURE"
+  "EXPECTED",
+  "PRESSURE",
+  "12345678",
+  "HOSPITAL",
+  "BIRTHDAY",
+  "COVERAGE",
+
 ]

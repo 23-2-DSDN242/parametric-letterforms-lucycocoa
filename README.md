@@ -1,14 +1,7 @@
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/xQz3oEP8)
 ## MDDN 242 2024 Assignment 2
 
-(Replace this README with information about your alphabet. This is an example.)
 
-Each of my letters is composed with two circles. The size and position of the first circle is fixed, but the location and size of the second circle is controlled by three parameters.
-
-The three parameters per letter:
-  * `size` : radius of the second circle
-  * `offsetx` : x offset of the second circle relative to the first one
-  * `offsety` : y offset of the second circle relative to the first one
 
 # Initial design
 
@@ -30,7 +23,11 @@ I sketched a letter composed of nine paramaters consisting of straight lines and
 At first, it took some time to understand how to determine parameters for shapes and set them, but once I adapted, I was able to plan the final design.
 
  
-After realizing that I only drew a,b and c but needed nine parameters, I reconsidered the letter interface, aiming to compose it within a maximum of 20 parameters.
+After realizing that I only drew a,b and c but needed nine parameters, I reconsidered the letter interface, aiming to compose it within a maximum of 20 parameters drawing inspiration from my other sketch to design vibrant colout schemes.
+
+<img width="1221" alt="Screenshot 2024-05-02 at 12 08 47 PM" src="https://github.com/23-2-DSDN242/parametric-letterforms-23.MDDN242_Parametric_Design/assets/140350024/572e3a2b-b0bc-4163-a7e8-756a899deb7c">
+
+
 
 # Design the Alphabet
 
@@ -390,6 +387,8 @@ I named my font design "Bossbaby" because it contains my favorite designed lette
 ![preview (51)](https://github.com/23-2-DSDN242/time-based-media-lucycocoa/assets/140350024/66d139c2-8057-4736-a834-101ba213c374)
 
 ******
+
+I arranged swapwords with colour combinations between each letter, easily recognizable proportions, and letters from designs that I personally like.
 
 
 ![preview (38)](https://github.com/23-2-DSDN242/time-based-media-lucycocoa/assets/140350024/1fea3725-39af-4a62-8d81-8bbbd0c91a76)

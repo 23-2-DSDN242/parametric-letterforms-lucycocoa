@@ -178,10 +178,13 @@ var swapWords = [
   "BOSSBABY",
   "EXPECTED",
   "PRESSURE",
+  "MMMMWWWW",
+  "MMWWMMWW",
   "ACTUALLY",
   "12345678",
   "HOSPITAL",
   "BIRTHDAY",
   "COVERAGE",
+  "  XOXO  "
 
 ]

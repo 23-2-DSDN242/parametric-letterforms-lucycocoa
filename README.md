@@ -388,7 +388,7 @@ I named my font design "Bossbaby" because it contains my favorite designed lette
 
 ******
 
-I arranged swapwords with colour combinations between each letter, easily recognizable proportions, and letters from designs that I personally like.
+I arranged swapwords with colour combinations between each letter, easily recognizable proportions, and letters designs that I personally like.
 
 
 ![preview (38)](https://github.com/23-2-DSDN242/time-based-media-lucycocoa/assets/140350024/1fea3725-39af-4a62-8d81-8bbbd0c91a76)

@@ -179,6 +179,7 @@ var swapWords = [
   "EXPECTED",
   "PRESSURE",
   "MMMMWWWW",
+  "MMMMMMMM",
   "MMWWMMWW",
   "ACTUALLY",
   "12345678",

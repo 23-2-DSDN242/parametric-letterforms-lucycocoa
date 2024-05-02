@@ -13,24 +13,44 @@ const canvasHeight = 500;
  */
 
 const letterA = {
-  "size": 80,
+  "size1": 150,
+  "size2": 0,
   "offsetx": 0,
-  "offsety": 35
+  "offsety": 0,
+  "offsetx3": 0,
+  "offsety3": 0,
+  "sizeb":0,
+  "offsetxellipse": 10,
+  "offsetyellipse": 80
 }
 
 const letterB = {
-  "size": 150,
-  "offsetx": 0,
-  "offsety": -145
+  "size1": 0,
+  "size2": 70,
+  "offsetx": -60,
+  "offsety": 0,
+  "offsetx3": -20,
+  "offsety3": -20,
+  "size3":90,
+  "offsetxellipse": -51,
+  "offsetyellipse": -80
 }
 
 const letterC = {
-  "size": 100,
-  "offsetx": 30,
-  "offsety": 0
+  "size1": 150,
+  "size2": 0,
+  "offsetx": 0,
+  "offsety": 280,
+  "offsetx3": 0,
+  "offsety3": 0,
+  "sizeb":0,
+  "offsetxellipse": 0,
+  "offsetyellipse": 0
 }
 
-const backgroundColor  = "#acf2e7";
+
+
+const backgroundColor  = "white ";
 
 const darkGreen  = "#26b29d";
 const lightGreen  = "#30dfc4";
@@ -65,15 +85,52 @@ function draw () {
 
 function drawLetter(posx, posy, letterData) {
   // determine parameters for second circle
-  let size2 = letterData["size"];
+  let size1 = letterData["size1"];
+  let size2 = letterData["size2"];
+  let size3 = letterData["size3"];
+  //3 arcs
+
   let pos2x = posx + letterData["offsetx"];
   let pos2y = posy + letterData["offsety"];
+  let pos3x = posx + letterData["offsetx3"];
+  let pos3y = posy + letterData["offsety3"];
+  let pos4x = posx + letterData["offsetxellipse"];
+  let pos4y = posy + letterData["offsetyellipse"];
 
-  // draw two circles
-  fill(darkGreen);
-  ellipse(posx, posy, 150, 150);
-  fill(lightGreen);
-  ellipse(pos2x, pos2y, size2, size2);
+  
+  
+  
+
+
+  stroke("pink")
+  strokeWeight(50)
+  noFill()
+
+  angleMode(DEGREES)
+  arc(posx, posy, size1*1, size1*1, 90, 270)
+
+ 
+
+
+
+  stroke("skyblue")
+  line(pos2x+10,pos2y-80,pos2x+10,pos2y+80)
+ 
+  
+  stroke("pink")
+  arc(pos3x+10,pos3y-20,size2*1,size2*1,270,90)
+  arc(pos3x+10,pos3y+50,size3*1,size3*1,270,90)
+
+  noStroke()
+  fill('white')
+  ellipse(pos4x,pos4y,40,40)
+
+  fill('skyblue')
+  ellipse(pos4x,pos4y,20,20)
+
+ 
+
+
 }
 
 function keyTyped() {

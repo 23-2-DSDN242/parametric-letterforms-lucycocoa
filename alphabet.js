@@ -21,7 +21,7 @@ const canvasHeight = 500;
 // Handy string of all letters available
 const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789?";
 
-let debugBox = false;
+let debugBox = false; ////////////// SYSTEMBOX
 
 function setup () {
   // create the drawing canvas, save the canvas element

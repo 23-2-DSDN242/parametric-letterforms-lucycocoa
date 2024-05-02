@@ -393,6 +393,11 @@ I arranged swapwords with colour combinations between each letter, easily recogn
 
 ![preview (38)](https://github.com/23-2-DSDN242/time-based-media-lucycocoa/assets/140350024/1fea3725-39af-4a62-8d81-8bbbd0c91a76)
 ![preview (39)](https://github.com/23-2-DSDN242/time-based-media-lucycocoa/assets/140350024/4ff5cfd9-e758-4aae-9212-4a3929277e95)
+
+The transition from 'MMMMWWWW' to 'MMWWMMWW' showcases the swapwords, which effectively demonstrates the interpolation I applied. (stroke size of 60 and center it at the 50%, rotate clockwise)
+![preview (34)](https://github.com/23-2-DSDN242/parametric-letterforms-lucycocoa/assets/140350024/0026e8aa-722d-4adb-81d5-5bbc31ceab13)
+![preview (35)](https://github.com/23-2-DSDN242/parametric-letterforms-lucycocoa/assets/140350024/e7fb05e5-18a6-4ca2-a820-9e4144f5f7c8)
+
 ![preview (41)](https://github.com/23-2-DSDN242/time-based-media-lucycocoa/assets/140350024/b48700dd-8833-4bb8-b26d-ed55ad70d381)
 ![preview (42)](https://github.com/23-2-DSDN242/time-based-media-lucycocoa/assets/140350024/27098cff-c525-4afd-bd3b-7a08cb376c7a)
 ![preview (43)](https://github.com/23-2-DSDN242/time-based-media-lucycocoa/assets/140350024/49e06807-c1a9-42d1-aef3-b017221ea835)
